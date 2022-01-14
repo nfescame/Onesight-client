@@ -7,6 +7,7 @@ import { authContext } from "../../contexts/authContext";
 
 function TaskCreate(props) {
   const [state, setState] = useState({
+    title: "",
     description: "",
     status: "A fazer",
     startDate: new Date().toISOString().split("T")[0],
@@ -20,7 +21,7 @@ function TaskCreate(props) {
 
   async function handleSubmit(event) {
     event.preventDefault();
-
+    console.log(state);
     try {
       const response = await api.post(`/task`, {
         ...state,
@@ -49,7 +50,7 @@ function TaskCreate(props) {
       state={state}
       handleChange={handleChange}
       handleSubmit={handleSubmit}
-      buttonText="Criar Tarefa"
+      buttonText='Criar Nota'
     />
   );
 }

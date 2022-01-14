@@ -32,8 +32,8 @@ function ProjectList() {
       {loading ? (
         <LoadingSpinner />
       ) : (
-        <table className="table table-hover">
-          <thead className="table-primary">
+        <table className='table table-hover'>
+          <thead className='table-primary'>
             <tr>
               <th>Nome</th>
               <th>Data Início</th>
@@ -55,7 +55,7 @@ function ProjectList() {
                     {
                       new Date(projectObj.startDate)
                         .toLocaleString()
-                        .split(",")[0]
+                        .split(" ")[0]
                     }
                   </td>
                   <td>{projectObj.projectOwner.name}</td>

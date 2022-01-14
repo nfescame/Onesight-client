@@ -10,17 +10,17 @@ function Navbar() {
     <nav className='navbar navbar-expand-lg navbar-light bg-primary'>
       <div className='container-fluid'>
         <NavLink className='navbar-brand' to='/projetos'>
-          Project.io
+          Onesight
         </NavLink>
 
         <div
-          className='collapse navbar-collapse  d-flex justify-content-between'
+          className='collapse navbar-collapse d-flex justify-content-between'
           id='navbarNav'
         >
-          <ul className='navbar-nav'>
-            <li className='nav-item'>
+          <ul className='navbar-nav '>
+            <li className='nav-item '>
               <NavLink
-                className='nav-link'
+                className='nav-link '
                 activeClassName='active'
                 exact
                 to='/projetos'
@@ -35,16 +35,23 @@ function Navbar() {
                 exact
                 to='/projeto/criar'
               >
-                Novo Projeto
+                Nova tarefa
               </NavLink>
             </li>
             {loggedInUser.user._id ? (
               <li
-                className='nav-item d-flex align-items-center'
+                className='nav-item d-flex align-items-center '
                 onClick={logout}
                 style={{ cursor: "pointer" }}
               >
-                <span>Sair</span>
+                <NavLink
+                  className='nav-link'
+                  activeClassName='active'
+                  exact
+                  to='/projeto/criar'
+                >
+                  <span>Sair</span>
+                </NavLink>
               </li>
             ) : null}
           </ul>

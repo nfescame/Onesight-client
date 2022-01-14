@@ -22,7 +22,7 @@ function Signup() {
 
   const history = useHistory();
 
-  const { loggedInUser, setLoggedInUser } = useContext(authContext);
+  const { loggedInUser } = useContext(authContext);
 
   useEffect(() => {
     // Caso o usuário já esteja logado, redirecione para página principal
@@ -66,6 +66,7 @@ function Signup() {
       history.push("/login");
     } catch (err) {
       console.error(err.response);
+
       setLoading(false);
 
       if (!err.response.data) {
@@ -133,6 +134,9 @@ function Signup() {
 
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
       </form>
+      <div className='d-flex'>
+        <a href='/login'>Já tenho uma Conta</a>
+      </div>
     </div>
   );
 }

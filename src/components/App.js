@@ -20,28 +20,28 @@ function App() {
     <BrowserRouter>
       <AuthContextComponent>
         <Navbar />
-        <div className="container mt-5">
+        <div className='container mt-5'>
           {/* ATENÇÃO: essas rotas NÃO tem relação com as rotas do backend, portanto os nomes podem ser diferentes */}
-          <Route path="/cadastro-usuario" component={Signup} />
-          <Route path="/login" component={Login} />
-          <PrivateRoute exact path="/projetos" component={ProjectList} />
+          <Route path='/cadastro-usuario' component={Signup} />
+          <Route exact path='/login' component={Login} />
+          <PrivateRoute exact path='/projetos' component={ProjectList} />
           <Switch>
             <PrivateRoute
               exact
-              path="/projeto/criar"
+              path='/projeto/criar'
               component={ProjectCreate}
             />
             <PrivateRoute
               exact
-              path="/projeto/editar/:id"
+              path='/projeto/editar/:id'
               component={ProjectEdit}
             />
             <PrivateRoute
               exact
-              path="/projeto/deletar/:id"
+              path='/projeto/deletar/:id'
               component={ProjectDelete}
             />
-            <PrivateRoute exact path="/projeto/:id" component={ProjectDetail} />
+            <PrivateRoute exact path='/projeto/:id' component={ProjectDetail} />
           </Switch>
         </div>
       </AuthContextComponent>

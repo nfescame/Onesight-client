@@ -20,15 +20,15 @@ function TaskCard(props) {
   }
 
   return (
-    <div className="border rounded p-2 shadow-sm bg-light m-2">
-      <p className="mb-0">{props.taskObj.description}</p>
-      <small style={{ fontSize: "10px" }} className="text-muted fst-italic">
+    <div className='border rounded p-2 shadow-sm bg-light m-2'>
+      <p className='mb-0'>{props.taskObj.title}</p>
+      <small style={{ fontSize: "10px" }} className='text-muted fst-italic'>
         {new Date(props.taskObj.startDate).toLocaleString()}
       </small>
-      <div className="w-100 text-end">
+      <div className='w-100 text-end'>
         <i
-          title="Editar"
-          className="fas fa-edit text-secondary me-2"
+          title='Editar'
+          className='fas fa-edit text-secondary me-2  w-50'
           // QUando o usuário clicar no botão de atualizar, atualizamos o state do componente acima para mostrar os dados da tarefa atual no formulário de edição
           onClick={() => {
             props.setTaskToUpdate({ ...props.taskObj });
@@ -36,8 +36,8 @@ function TaskCard(props) {
           }}
         ></i>
         <i
-          title="Deletar"
-          className="fas fa-trash-alt text-danger"
+          title='Deletar'
+          className='fas fa-trash-alt text-danger w-50'
           onClick={() => setShowModal(true)}
         ></i>
       </div>
