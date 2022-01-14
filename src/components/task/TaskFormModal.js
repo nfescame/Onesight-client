@@ -8,7 +8,6 @@ export default function FormModal({
   dataInicioView,
   setDataInicioView,
 }) {
-  console.log(descView);
   return (
     <div className='d-flex mb-5 '>
       <button
@@ -17,13 +16,12 @@ export default function FormModal({
         data-toggle='modal'
         data-target='#exampleModal1'
       >
-        Adicionar Novo Campo
+        Adicionar novo campo
       </button>
 
       <div
         className='modal fade bg-blue'
         id='exampleModal1'
-        tabindex='-1'
         role='dialog'
         aria-labelledby='exampleModalLabel'
         aria-hidden='true'
@@ -32,7 +30,7 @@ export default function FormModal({
           <div className='modal-content'>
             <div className='modal-header'>
               <h5 className='modal-title' id='exampleModalLabel'>
-                dddddd
+                Selecione campo adicional
               </h5>
             </div>
             <div className='modal-body'>
@@ -40,14 +38,13 @@ export default function FormModal({
                 <input
                   className='form-check-input'
                   type='checkbox'
-                  value=''
                   id='flexCheckDefault'
                   checked={descView}
                   onChange={() => {
                     setDescView(!descView);
                   }}
                 />
-                <label className='form-check-label' for='flexCheckDefault'>
+                <label className='form-check-label' htmlFor='flexCheckDefault'>
                   Descrição
                 </label>
               </div>
@@ -56,14 +53,13 @@ export default function FormModal({
                 <input
                   className='form-check-input'
                   type='checkbox'
-                  value=''
                   id='flexCheckDefault1'
                   checked={statusView}
                   onChange={() => {
                     setStatusView(!statusView);
                   }}
                 />
-                <label className='form-check-label' for='flexCheckDefault'>
+                <label className='form-check-label' htmlFor='flexCheckDefault'>
                   Status
                 </label>
               </div>
@@ -72,14 +68,13 @@ export default function FormModal({
                 <input
                   className='form-check-input'
                   type='checkbox'
-                  value=''
                   id='flexCheckDefault'
                   checked={dataInicioView}
                   onChange={() => {
                     setDataInicioView(!dataInicioView);
                   }}
                 />
-                <label className='form-check-label' for='flexCheckDefault'>
+                <label className='form-check-label' htmlFor='flexCheckDefault'>
                   Data Início
                 </label>
               </div>

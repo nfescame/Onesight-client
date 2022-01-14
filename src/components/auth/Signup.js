@@ -59,8 +59,7 @@ function Signup() {
 
       const pictureUrl = await handleUpload(state.profilePicture);
 
-      const response = await api.post("/signup", { ...state, pictureUrl });
-      console.log(response);
+      await api.post("/signup", { ...state, pictureUrl });
 
       setLoading(false);
       history.push("/login");

@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import { AuthContextComponent } from "../contexts/authContext";
 
 import Navbar from "./Navbar";

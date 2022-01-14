@@ -27,13 +27,11 @@ function TaskEdit(props) {
     event.preventDefault();
 
     try {
-      const response = await api.patch(`/task/${props.state._id}`, {
+      await api.patch(`/task/${props.state._id}`, {
         ...state,
         taskOwner: loggedInUser.user._id,
         projectId: props.projectId,
       });
-
-      console.log(response.data);
 
       // Limpando o formulário após a criação
       setState({
@@ -54,7 +52,7 @@ function TaskEdit(props) {
       state={state}
       handleChange={handleChange}
       handleSubmit={handleSubmit}
-      buttonText="Editar Tarefa"
+      buttonText='Editar Tarefa'
     />
   );
 }

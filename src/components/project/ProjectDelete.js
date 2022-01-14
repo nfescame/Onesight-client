@@ -10,9 +10,8 @@ function ProjectDelete() {
   useEffect(() => {
     async function deleteProject() {
       try {
-        const response = await api.delete(`/project/${id}`);
+        await api.delete(`/project/${id}`);
 
-        console.log(response.data);
         history.push("/projetos");
       } catch (err) {
         console.error(err);

@@ -21,15 +21,13 @@ function TaskCreate(props) {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    console.log(state);
+
     try {
-      const response = await api.post(`/task`, {
+      await api.post(`/task`, {
         ...state,
         taskOwner: loggedInUser.user._id,
         projectId: props.projectId,
       });
-
-      console.log(response.data);
 
       // Limpando o formulário após a criação
       setState({
@@ -50,7 +48,7 @@ function TaskCreate(props) {
       state={state}
       handleChange={handleChange}
       handleSubmit={handleSubmit}
-      buttonText='Criar Nota'
+      buttonText='Criar nota'
     />
   );
 }

@@ -5,7 +5,7 @@ import FormModal from "./TaskFormModal";
 
 function TaskForm(props) {
   const [descView, setDescView] = useState(false);
-  const [statusView, setStatusView] = useState(false);
+  const [statusView, setStatusView] = useState(true);
   const [dataInicioView, setDataInicioView] = useState(false);
   return (
     <>

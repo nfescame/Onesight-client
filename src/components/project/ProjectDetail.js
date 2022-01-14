@@ -73,8 +73,8 @@ function ProjectDetail() {
         // O <> é um Fragment, um componente do React especial que não renderiza nada na tela
         <>
           <h3>
-            Título da Tarefa:{" "}
-            <b style={{ fontSize: "2.5rem", color: "#c71464" }}>
+            Título da tarefa:{" "}
+            <b style={{ fontSize: "2.5rem", color: "#08b7ff" }}>
               {projectDetails.name}
             </b>
           </h3>
@@ -115,7 +115,7 @@ function ProjectDetail() {
           }}
           className='btn btn-primary mb-5 w-100'
         >
-          Nova Nota
+          Nova nota
         </button>
       </div>
 
@@ -154,7 +154,7 @@ function ProjectDetail() {
             textAlign: "center",
           }}
         >
-          <h3 style={{ color: "#c71464" }}>A fazer</h3>
+          <h3 style={{ color: "#08b7ff" }}>A fazer</h3>
 
           <div className='d-flex flex-column'>
             {projectDetails.tasks
@@ -178,7 +178,7 @@ function ProjectDetail() {
             textAlign: "center",
           }}
         >
-          <h3 style={{ color: "#c71464" }}>Fazendo</h3>
+          <h3 style={{ color: "#08b7ff" }}>Fazendo</h3>
           <div className='d-flex flex-column'>
             {projectDetails.tasks
               .filter((taskObj) => taskObj.status === "Fazendo")
@@ -201,7 +201,7 @@ function ProjectDetail() {
             textAlign: "center",
           }}
         >
-          <h3 style={{ color: "#c71464" }}>Feito</h3>
+          <h3 style={{ color: "#08b7ff" }}>Feito</h3>
           <div className='d-flex flex-column'>
             {projectDetails.tasks
               .filter((taskObj) => taskObj.status === "Feito")
